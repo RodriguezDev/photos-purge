@@ -16,6 +16,9 @@
 		A1C752152C55F71400095B25 /* PurgeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C752142C55F71400095B25 /* PurgeTests.swift */; };
 		A1C7521F2C55F71400095B25 /* PurgeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C7521E2C55F71400095B25 /* PurgeUITests.swift */; };
 		A1C752212C55F71400095B25 /* PurgeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C752202C55F71400095B25 /* PurgeUITestsLaunchTests.swift */; };
+		A1C7522E2C56B94D00095B25 /* PhotoQueueManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C7522D2C56B94D00095B25 /* PhotoQueueManager.swift */; };
+		A1C752312C56BE0000095B25 /* Collections in Frameworks */ = {isa = PBXBuildFile; productRef = A1C752302C56BE0000095B25 /* Collections */; };
+		A1C752332C56BE0000095B25 /* DequeModule in Frameworks */ = {isa = PBXBuildFile; productRef = A1C752322C56BE0000095B25 /* DequeModule */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,7 @@
 		A1C7521A2C55F71400095B25 /* PurgeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PurgeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1C7521E2C55F71400095B25 /* PurgeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurgeUITests.swift; sourceTree = "<group>"; };
 		A1C752202C55F71400095B25 /* PurgeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurgeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A1C7522D2C56B94D00095B25 /* PhotoQueueManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoQueueManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1C752312C56BE0000095B25 /* Collections in Frameworks */,
+				A1C752332C56BE0000095B25 /* DequeModule in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +112,7 @@
 				A1C752062C55F71400095B25 /* Assets.xcassets */,
 				A1C752082C55F71400095B25 /* LaunchScreen.storyboard */,
 				A1C7520B2C55F71400095B25 /* Info.plist */,
+				A1C7522D2C56B94D00095B25 /* PhotoQueueManager.swift */,
 			);
 			path = Purge;
 			sourceTree = "<group>";
@@ -143,6 +150,10 @@
 			dependencies = (
 			);
 			name = Purge;
+			packageProductDependencies = (
+				A1C752302C56BE0000095B25 /* Collections */,
+				A1C752322C56BE0000095B25 /* DequeModule */,
+			);
 			productName = Purge;
 			productReference = A1C751FA2C55F71200095B25 /* Purge.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +226,9 @@
 				Base,
 			);
 			mainGroup = A1C751F12C55F71200095B25;
+			packageReferences = (
+				A1C7522F2C56BE0000095B25 /* XCRemoteSwiftPackageReference "swift-collections" */,
+			);
 			productRefGroup = A1C751FB2C55F71200095B25 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -258,6 +272,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1C7522E2C56B94D00095B25 /* PhotoQueueManager.swift in Sources */,
 				A1C752022C55F71200095B25 /* ViewController.swift in Sources */,
 				A1C751FE2C55F71200095B25 /* AppDelegate.swift in Sources */,
 				A1C752002C55F71200095B25 /* SceneDelegate.swift in Sources */,
@@ -445,11 +460,13 @@
 				DEVELOPMENT_TEAM = GS4NV7H2UK;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Purge/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Cause I want it";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -473,11 +490,13 @@
 				DEVELOPMENT_TEAM = GS4NV7H2UK;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Purge/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Cause I want it";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -607,6 +626,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A1C7522F2C56BE0000095B25 /* XCRemoteSwiftPackageReference "swift-collections" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-collections.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A1C752302C56BE0000095B25 /* Collections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A1C7522F2C56BE0000095B25 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = Collections;
+		};
+		A1C752322C56BE0000095B25 /* DequeModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A1C7522F2C56BE0000095B25 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = DequeModule;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A1C751F22C55F71200095B25 /* Project object */;
 }
